@@ -462,7 +462,6 @@ html[data-theme="winter"] .theme-toggle__icon--snow { opacity: 1; transform: non
   50% { transform: translateX(2px) skewX(.2deg); opacity: 1; }
   100% { transform: translateX(6px) skewX(1deg); opacity: .7; }
 }
-.windowsill { position: absolute; left: 0; right: 0; bottom: 6%; height: 7%; background: linear-gradient(180deg, var(--wood-1), var(--wood-2)); box-shadow: 0 -14px 30px rgba(0, 0, 0, .35); }
 .mug { position: absolute; right: 16%; bottom: 11%; width: 54px; height: 46px; border-radius: 6px 6px 16px 16px; background: linear-gradient(135deg, #f3e5cd, #cbb394); box-shadow: 0 10px 20px rgba(0, 0, 0, .3); }
 .mug::after { content: ""; position: absolute; right: -14px; top: 10px; width: 20px; height: 20px; border: 5px solid #ddc8a7; border-left: 0; border-radius: 0 12px 12px 0; }
 .mug__steam { position: absolute; bottom: 100%; left: 30%; width: 8px; height: 40px; border-radius: 50%; border-left: 2px solid rgba(255, 255, 255, .5); animation: steam 3.2s ease-in-out infinite; }
@@ -491,10 +490,6 @@ html[data-theme="winter"] .theme-toggle__icon--snow { opacity: 1; transform: non
 .hero__offer-icon svg { width: 17px; height: 17px; }
 .hero__offer strong { color: var(--accent-strong); }
 .hero__buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
-.hero__trust { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 30px; font-size: 13px; color: var(--ink-dim); }
-.hero__trust span:first-child { display: inline-flex; align-items: center; gap: 6px; color: var(--accent-strong); }
-.hero__trust svg { width: 15px; height: 15px; }
-.hero__trust-sep { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: .5; }
 .hero__scroll { position: absolute; right: 26px; bottom: 34px; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-dim); writing-mode: vertical-rl; }
 .hero__scroll-line { width: 1px; height: 64px; background: linear-gradient(var(--accent), transparent); position: relative; overflow: hidden; }
 .hero__scroll-line::after { content: ""; position: absolute; inset: 0; background: #fff; animation: scrollLine 2.2s ease-in-out infinite; }

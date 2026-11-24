@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="ru" data-theme="winter">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1112">
+  <meta name="description" content="Отель в лесу — дыши лесом, живи моментом. Уютные номера, баня, завтраки и прямые бронирования в сердце природы.">
+  <title>Отель в лесу — Дыши лесом. Живи моментом.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23143d28'/%3E%3Cpath d='M16 4 9 14h4L7 24h6l-2 4h10l-2-4h6l-6-10h4L16 4Z' fill='%23e6b56b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- ============ SVG-иконки ============ -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-pine" viewBox="0 0 24 24"><path d="M12 2 7 9h2.6L5 16h4l-2 4h10l-2-4h4l-4.6-7H17L12 2Z" fill="currentColor"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 1.8v2.6M12 19.6v2.6M1.8 12h2.6M19.6 12h2.6M4.8 4.8l1.9 1.9M17.3 17.3l1.9 1.9M19.2 4.8l-1.9 1.9M6.7 17.3l-1.9 1.9"/></g></symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M20.7 7 3.3 17"/><path d="m9 4.5 3 2.5 3-2.5M9 19.5l3-2.5 3 2.5"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 2h3l1.5 4-2 1.5a13 13 0 0 0 6.4 6.4l1.5-2 4 1.5v3c0 1.4-1.1 2.6-2.6 2.6A16.4 16.4 0 0 1 2 4.6C2 3.1 3.1 2 6.6 2Z" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 6.5 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24"><path d="m21 3-3 17-5.2-3.6-3.2 2.2.3-4L3.5 11 21 3Z" fill="currentColor"/><path d="m8.5 13.3 9.2-7.1-6 9.2-.5 3-2.7-2.1Z" fill="var(--icon-cut, #fff)" opacity=".55"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 5 5.2-1.3A10 10 0 1 0 12 2Z" fill="currentColor"/><path d="M9 7.2c.4-.2.8-.2 1.1.3l1.2 2.6c.1.3 0 .5-.2.7l-.8.9c.8 1.5 2 2.7 3.5 3.4l.9-.8c.2-.2.5-.2.7-.1l2.5 1.2c.5.3.5.8.3 1.2-.4 1-1.6 1.9-3 1.7a11.8 11.8 0 0 1-5.4-2.2 12 12 0 0 1-3.5-4.1c-.7-1.4-.6-2.9.2-3.8l1.5-1.9Z" fill="var(--icon-cut, #fff)" opacity=".55"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12A7 7 0 1 0 5 10c0 5.8 7 12 7 12Z" fill="currentColor"/><circle cx="12" cy="10" r="2.6" fill="var(--icon-cut, #fff)"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 6.5V12l3.6 2.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12.5 5 5 10-11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 2c1.5 4-2.6 4.7-1.6 8.4C9 9.4 8.5 7.7 8.7 6 5.6 8.3 4 11.3 4 14.5A8 8 0 0 0 20 14.5c0-4.4-2.7-7.8-5.2-9.6.1 2.5-1 3.6-1.7 4C13.8 6.3 13.3 3.8 12 2Z" fill="currentColor"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="currentColor"/><path d="M3.5 22a8.5 8.5 0 0 1 17 0Z" fill="currentColor"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.6 2.8 5.9 6.5.8-4.8 4.5 1.3 6.4L12 17l-5.8 3.2 1.3-6.4-4.8-4.5 6.5-.8L12 2.6Z" fill="currentColor"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1.5c.6 5.6 3.9 8.9 9.5 9.5-5.6.6-8.9 3.9-9.5 9.5-.6-5.6-3.9-8.9-9.5-9.5C8.1 10.4 11.4 7.1 12 1.5Z" fill="currentColor"/></symbol>
+    <!-- Ткань штор: линии из референсов Волна.jpg и Волны2.avif -->
+    <pattern id="curtain-waves" patternUnits="userSpaceOnUse" width="200" height="1000">
+      <image href="assets/img/curtain-waves.jpg" x="0" y="0" width="200" height="1000" preserveAspectRatio="none" opacity=".78"/>
+      <image href="assets/img/curtain-waves-2.avif" x="0" y="0" width="200" height="1000" preserveAspectRatio="none" opacity=".45"/>
+    </pattern>
+  </svg>
+
+  <!-- ============ Фон: радикальный градиент, привязанный к скроллу ============ -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__gradient"></div>
+    <div class="ambient__blob ambient__blob--one"></div>
+    <div class="ambient__blob ambient__blob--two"></div>
+    <div class="ambient__grain"></div>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="snowfall" id="snowfall" aria-hidden="true"></div>
+  <div class="fx-layer" id="fx-layer" aria-hidden="true"></div>
+
+  <!-- Кликабельные праздничные объекты -->
+  <div class="fx-interactive" id="fx-interactive" aria-label="Праздничные объекты">
+    <button class="fx-item fx-item--snow" type="button" data-object="snow" aria-label="Снежинка — зимние активности">
+      <span class="fx-item__halo"></span>
+      <span class="fx-item__icon"><svg><use href="#i-snow"/></svg></span>
+      <span class="fx-item__label">Зимние активности</span>
+    </button>
+    <button class="fx-item fx-item--cone" type="button" data-object="cone" aria-label="Шишка — зимний лес">
+      <span class="fx-item__halo"></span>
+      <span class="fx-item__icon"><svg viewBox="0 0 40 40"><path d="M20 3c6 4 9 10 9 18s-4 15-9 17c-5-2-9-9-9-17s3-14 9-18Z" fill="#8c623f"/><path d="M11 16h18M10 23h20M13 30h14" stroke="#d5ad7d" stroke-width="2"/><path d="M13 7c2 3 4 4 7 5 3-1 5-2 7-5" fill="none" stroke="#5f4129" stroke-width="2"/></svg></span>
+      <span class="fx-item__label">Зимний лес</span>
+    </button>
+    <button class="fx-item fx-item--ornament" type="button" data-object="ornament" aria-label="Ёлочная игрушка — новогодний пакет">
+      <span class="fx-item__halo"></span>
+      <span class="fx-item__icon"><svg viewBox="0 0 40 40"><path d="M17 3h6v6h-6z" fill="#e6c98f"/><circle cx="20" cy="24" r="13" fill="#c4382c"/><path d="M12 20c4-5 10-6 15-3" stroke="#f7b6a0" stroke-width="2" fill="none"/></svg></span>
+      <span class="fx-item__label">Новогодний пакет</span>
+    </button>
+  </div>
+
+  <!-- ============ Шапка ============ -->
+  <header class="header" id="header">
+    <div class="header__inner shell">
+      <a class="brand" href="#top">
+        <span class="brand__mark"><svg><use href="#i-pine"/></svg></span>
+        <span class="brand__text"><strong>ЛЕС</strong><span>и СВЕТ</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#why" class="nav__link">Почему мы</a>
+        <a href="#rooms" class="nav__link">Номера</a>
+        <a href="#activities" class="nav__link">Активности</a>
+        <a href="#route" class="nav__link">Как добраться</a>
+        <a href="#contacts" class="nav__link">Контакты</a>
+        <a href="#booking" class="nav__link nav__cta-mobile" data-intent="general">Забронировать</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="true" aria-label="Зима — переключить на летнюю тему" title="Лето / Новый год">
+          <span class="theme-toggle__track">
+            <span class="theme-toggle__thumb">
+              <svg class="theme-toggle__icon theme-toggle__icon--sun"><use href="#i-sun"/></svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--snow"><use href="#i-snow"/></svg>
+            </span>
+          </span>
+          <span class="theme-toggle__label" id="theme-label">Зима</span>
+        </button>
+        <a href="#booking" class="btn btn--small btn--accent header__book" data-intent="general">Забронировать <svg class="btn__icon"><use href="#i-arrow"/></svg></a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню"><svg><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ Экран 1. Hero ============ -->
+    <section class="hero" id="top">
+      <div class="garland garland--hero" aria-hidden="true"></div>
+      <div class="hero-stage" aria-hidden="true">
+        <div class="scene-world" id="scene-world">
+          <div class="scene-photo"></div>
+          <div class="scene-sky"></div>
+          <div class="scene-orb"></div>
+          <div class="scene-hills scene-hills--back"></div>
+          <div class="pine-layer pine-layer--far" data-depth="0.35"></div>
+          <div class="pine-layer pine-layer--mid" data-depth="0.6"></div>
+          <div class="scene-fog"></div>
+          <div class="pine-layer pine-layer--near" data-depth="1"></div>
+          <div class="scene-cabin">
+            <svg viewBox="0 0 220 150" preserveAspectRatio="xMidYMax meet">
+              <path d="M18 76 110 16l92 60v70H18Z" fill="currentColor" opacity=".92"/>
+              <path d="M8 78 110 8l102 70-8 10-94-63-94 63Z" fill="currentColor"/>
+              <rect x="88" y="96" width="44" height="50" rx="2" fill="var(--cabin-door)"/>
+              <rect x="96" y="104" width="12" height="12" rx="2" fill="var(--cabin-window)"/>
+              <rect x="38" y="98" width="18" height="18" rx="2" fill="var(--cabin-window)"/>
+              <rect x="164" y="98" width="18" height="18" rx="2" fill="var(--cabin-window)"/>
+              <rect x="150" y="30" width="13" height="28" rx="2" fill="currentColor"/>
+              <path class="chimney-smoke" d="M156 28c-9-10 8-14-1-25" fill="none" stroke="var(--cabin-window)" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="window-frame">
+          <span class="window-frame__edge window-frame__edge--top"></span>
+          <span class="window-frame__edge window-frame__edge--bottom"></span>
+          <span class="window-frame__edge window-frame__edge--left"></span>
+          <span class="window-frame__edge window-frame__edge--right"></span>
+          <span class="window-frame__bar window-frame__bar--v"></span>
+          <span class="window-frame__bar window-frame__bar--h"></span>
+          <span class="window-frame__glare"></span>
+        </div>
+
+        <div class="room-fg">
+          <div class="curtain curtain--left" aria-hidden="true">
+            <svg viewBox="0 0 200 1000" preserveAspectRatio="none" focusable="false">
+              <g class="curtain__cloth">
+                <path class="curtain__body" d="M0 0H200C176 120 196 230 168 340C142 450 190 560 158 670C132 770 180 880 150 1000H0Z"/>
+                <path class="curtain__texture" d="M0 0H200C176 120 196 230 168 340C142 450 190 560 158 670C132 770 180 880 150 1000H0Z"/>
+                <path class="curtain__fold" style="--i:0" d="M28 0C12 140 48 250 24 380C6 490 40 610 20 740C8 840 30 930 18 1000"/>
+                <path class="curtain__fold" style="--i:1" d="M76 0C58 150 94 270 68 400C46 520 86 640 62 770C48 860 72 940 58 1000"/>
+                <path class="curtain__fold" style="--i:2" d="M124 0C106 140 142 260 116 390C94 510 134 630 110 760C96 850 120 940 106 1000"/>
+                <path class="curtain__fold curtain__fold--light" style="--i:3" d="M168 0C150 130 180 250 154 380C132 500 170 620 146 750C132 840 154 930 138 1000"/>
+                <path class="curtain__hem" d="M0 1000H150"/>
+              </g>
+            </svg>
+          </div>
+          <div class="curtain curtain--right" aria-hidden="true">
+            <svg viewBox="0 0 200 1000" preserveAspectRatio="none" focusable="false">
+              <g transform="translate(200 0) scale(-1 1)">
+                <g class="curtain__cloth">
+                  <path class="curtain__body" d="M0 0H200C176 120 196 230 168 340C142 450 190 560 158 670C132 770 180 880 150 1000H0Z"/>
+                  <path class="curtain__texture" d="M0 0H200C176 120 196 230 168 340C142 450 190 560 158 670C132 770 180 880 150 1000H0Z"/>
+                  <path class="curtain__fold" style="--i:0" d="M28 0C12 140 48 250 24 380C6 490 40 610 20 740C8 840 30 930 18 1000"/>
+                  <path class="curtain__fold" style="--i:1" d="M76 0C58 150 94 270 68 400C46 520 86 640 62 770C48 860 72 940 58 1000"/>
+                  <path class="curtain__fold" style="--i:2" d="M124 0C106 140 142 260 116 390C94 510 134 630 110 760C96 850 120 940 106 1000"/>
+                  <path class="curtain__fold curtain__fold--light" style="--i:3" d="M168 0C150 130 180 250 154 380C132 500 170 620 146 750C132 840 154 930 138 1000"/>
+                  <path class="curtain__hem" d="M0 1000H150"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="windowsill"></div>
+          <div class="mug"><span class="mug__steam mug__steam--1"></span><span class="mug__steam mug__steam--2"></span><span class="mug__steam mug__steam--3"></span></div>
+          <div class="room-lamp"></div>
+          <div class="plaid"></div>
+        </div>
+      </div>
+
+      <div class="hero__content shell">
+        <div class="hero__eyebrow" data-parallax="0.05"><span class="dot"></span> <span id="hero-eyebrow-text">Новогодний сезон · 40 минут от города</span></div>
+        <h1 class="hero__title" data-parallax="0.09">Дыши лесом.<br><em>Живи моментом.</em></h1>
+        <p class="hero__subtitle" data-parallax="0.07">Семейный отдых, романтические выходные или корпоратив — в сердце природы, вдали от суеты.</p>
+        <div class="hero__offer" data-parallax="0.06">
+          <span class="hero__offer-icon"><svg><use href="#i-fire"/></svg></span>
+          <span id="hero-offer-text">Новогодний пакет: 3 ночи, баня, программа 31.12</span>
+          <strong id="hero-offer-price">24 900 ₽ / 3 ночи</strong>
+        </div>
+        <div class="hero__buttons" data-parallax="0.04">
+          <a href="#booking" class="btn btn--accent btn--lg" data-intent="general"><span id="hero-cta-text">Забронировать со скидкой 16%</span> <svg class="btn__icon"><use href="#i-arrow"/></svg></a>
+          <a href="#rooms" class="btn btn--ghost btn--lg">Смотреть номера</a>
+        </div>
+        <div class="hero__trust">
+          <span><svg><use href="#i-star"/></svg> 4,9 из 5</span>
+          <span class="hero__trust-sep"></span>
+          <span>120+ тёплых отзывов</span>
+          <span class="hero__trust-sep"></span>
+          <span>Без скрытых доплат</span>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Листай — вылетаем из окна</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ============ Праздничный баннер ============ -->
+    <section class="ny-banner" id="ny-banner">
+      <div class="garland garland--banner" aria-hidden="true"></div>
+      <div class="ny-banner__snow" aria-hidden="true"></div>
+      <div class="shell ny-banner__inner">
+        <span class="ny-banner__badge" data-parallax="0.06"><svg><use href="#i-snow"/></svg> Спецпредложение · только зимой</span>
+        <div class="ny-banner__copy" data-parallax="0.09">
+          <h2>Новогодняя сказка<br><em>начинается в лесу</em></h2>
+          <p>Ёлка, гирлянды, дым из трубы и тишина. 3 ночи с праздничной программой, баней и завтраками.</p>
+        </div>
+        <div class="ny-banner__price" data-parallax="0.12">
+          <span>29 700 ₽</span>
+          <strong>24 900 ₽</strong>
+          <small>за 3 ночи · −16%</small>
+        </div>
+        <a href="#booking" class="btn btn--gold btn--lg" data-intent="newyear">Забронировать со скидкой <svg class="btn__icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </section>
+
+    <!-- ============ Экран 2. Почему мы ============ -->
+    <section class="section section--why" id="why" data-parallax-bg="0.05" data-parallax-zoom="0.14">
+      <div class="shell">
+        <header class="section-head why-head reveal" data-parallax="0.08">
+          <span class="kicker">Пространство для своих</span>
+          <h2 class="section-title">Почувствуй соединение с лесом</h2>
+          <p class="section-comment">(здесь лучше чем на фото)</p>
+          <p class="section-lead">Мы честно показываем, как выглядит отдых у нас. И делаем всё, чтобы тревоги остались за лесной тропой.</p>
+        </header>
+
+        <div class="why-grid">
+        <article class="why-card reveal tilt-card" data-tilt data-parallax="0.14">
+          <div class="why-card__visual why-card__visual--quiet">
+            <span class="why-card__glow"></span>
+            <svg class="why-art" viewBox="0 0 240 180" aria-hidden="true">
+              <circle cx="180" cy="45" r="30" fill="var(--art-glow)"/>
+              <path d="M0 150 45 60l45 90ZM55 150 105 35l52 115ZM125 150 175 55l65 95Z" fill="var(--art-dark)"/>
+              <rect x="78" y="112" width="84" height="48" rx="8" fill="var(--art-wood)"/>
+              <rect x="90" y="122" width="24" height="20" rx="4" fill="var(--art-glow)"/>
+              <rect x="126" y="122" width="24" height="20" rx="4" fill="var(--art-glow)"/>
+              <path d="M0 160h240" stroke="var(--art-line)" stroke-width="3"/>
+            </svg>
+            <span class="why-card__num">01</span>
+          </div>
+          <div class="why-card__body">
+            <h3>Тишина и приватность</h3>
+            <p>Для пар, которым важно быть только друг с другом. У каждого номера — своя терраса и вид на лес, а соседи не слышны.</p>
+            <span class="why-card__pain">«Будет ли тихо?» → тишина с первого вечера</span>
+          </div>
+        </article>
+
+        <article class="why-card reveal tilt-card" data-tilt data-parallax="0.14">
+          <div class="why-card__visual why-card__visual--family">
+            <span class="why-card__glow"></span>
+            <svg class="why-art" viewBox="0 0 240 180" aria-hidden="true">
+              <circle cx="58" cy="42" r="22" fill="var(--art-glow)"/>
+              <path d="M0 150 40 70l40 80ZM45 150 92 45l50 105ZM110 150 160 60l80 90Z" fill="var(--art-dark)"/>
+              <rect x="70" y="108" width="100" height="52" rx="8" fill="var(--art-wood)"/>
+              <rect x="80" y="84" width="36" height="24" rx="6" fill="var(--art-wood)"/>
+              <circle cx="98" cy="93" r="6" fill="var(--art-glow)"/>
+              <circle cx="160" cy="132" r="9" fill="var(--art-glow)"/>
+              <path d="M0 160h240" stroke="var(--art-line)" stroke-width="3"/>
+            </svg>
+            <span class="why-card__num">02</span>
+          </div>
+          <div class="why-card__body">
+            <h3>Всё для детей</h3>
+            <p>Игровая зона, бельчата во дворе, экотропы и тёплый плед после прогулки. Дети не скучают — вы спокойно отдыхаете.</p>
+            <span class="why-card__pain">«Им будет скучно?» → программа на весь день</span>
+          </div>
+        </article>
+
+        <article class="why-card reveal tilt-card" data-tilt data-parallax="0.14">
+          <div class="why-card__visual why-card__visual--corporate">
+            <span class="why-card__glow"></span>
+            <svg class="why-art" viewBox="0 0 240 180" aria-hidden="true">
+              <circle cx="182" cy="46" r="26" fill="var(--art-glow)"/>
+              <path d="M0 150 48 55l48 95ZM52 150 105 38l55 112ZM120 150 172 50l68 100Z" fill="var(--art-dark)"/>
+              <rect x="62" y="112" width="116" height="48" rx="8" fill="var(--art-wood)"/>
+              <path d="M84 112v-16h72v16" fill="none" stroke="var(--art-wood)" stroke-width="5"/>
+              <circle cx="92" cy="128" r="5" fill="var(--art-glow)"/><circle cx="120" cy="128" r="5" fill="var(--art-glow)"/><circle cx="148" cy="128" r="5" fill="var(--art-glow)"/>
+              <path d="M0 160h240" stroke="var(--art-line)" stroke-width="3"/>
+            </svg>
+            <span class="why-card__num">03</span>
+          </div>
+          <div class="why-card__body">
+            <h3>Корпоративы под ключ</h3>
+            <p>Готовые пакеты: ужин у камина, баня, командообразование и тихие комнаты для переговоров. Организуем за один звонок.</p>
+            <span class="why-card__pain">«Сложно организовать?» → один контакт, всё готово</span>
+            <a href="#booking" class="text-link" data-intent="corporate">Запросить предложение <svg><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+    </section>
+
+    <!-- ============ Экран 3. Номера ============ -->
+    <section class="section section--rooms" id="rooms" data-parallax-bg="0.05">
+      <div class="shell">
+        <header class="section-head section-head--row reveal" data-parallax="0.08">
+          <div>
+            <span class="kicker">Номера</span>
+            <h2 class="section-title">Окно в лес.<br><em>И всё внутри.</em></h2>
+          </div>
+          <p class="section-lead section-lead--compact">Четыре способа проснуться среди сосен. В каждом — завтрак, халаты и вид, который не хочется фотографировать: лучше просто смотреть.</p>
+        </header>
+
+        <div class="rooms-grid">
+          <article class="room-card reveal tilt-card" data-tilt data-parallax="0.12" data-room="Лесной номер «Сосна»">
+            <div class="room-card__art">
+              <svg viewBox="0 0 480 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="480" height="320" fill="var(--r-wall)"/>
+                <rect x="130" y="26" width="220" height="176" rx="6" fill="var(--r-sky)"/>
+                <path d="M130 175 168 92l38 83ZM160 175 202 66l44 109ZM205 175 250 84l46 91ZM258 175 300 70l44 105ZM310 175 352 96l40 79Z" fill="var(--r-pine)"/>
+                <rect x="128" y="24" width="224" height="180" rx="6" fill="none" stroke="var(--r-wood)" stroke-width="10"/>
+                <path d="M240 26v178M130 116h220" stroke="var(--r-wood)" stroke-width="7"/>
+                <rect x="0" y="238" width="480" height="82" fill="var(--r-floor)"/>
+                <rect x="92" y="214" width="296" height="76" rx="12" fill="var(--r-bed)"/>
+                <rect x="110" y="196" width="88" height="40" rx="14" fill="var(--r-linen)"/>
+                <rect x="208" y="196" width="88" height="40" rx="14" fill="var(--r-linen)"/>
+                <path d="M100 258h280" stroke="var(--r-plaid)" stroke-width="14" opacity=".8"/>
+                <circle cx="422" cy="96" r="34" fill="var(--r-glow)" opacity=".55"/>
+              </svg>
+              <span class="room-card__tag">Самый выбираемый</span>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__top"><h3>Лесной номер «Сосна»</h3><span class="room-card__area">24 м² · 2 гостя</span></div>
+              <p>Панорамное окно, кровать с пледом, терраса и утренний свет сквозь сосны.</p>
+              <div class="room-card__footer"><span class="price"><strong>6 500 ₽</strong> / ночь</span><button class="btn btn--small btn--accent" data-intent="room" data-value="Лесной номер «Сосна»">Выбрать <svg class="btn__icon"><use href="#i-arrow"/></svg></button></div>
+            </div>
+          </article>
+
+          <article class="room-card reveal tilt-card" data-tilt data-parallax="0.12" data-room="Номер с камином «Жар»">
+            <div class="room-card__art room-card__art--fire">
+              <svg viewBox="0 0 480 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="480" height="320" fill="var(--r-wall-deep)"/>
+                <rect x="272" y="34" width="160" height="148" rx="6" fill="var(--r-sky)"/>
+                <path d="M272 158 312 92l36 66ZM306 158 348 76l42 82ZM356 158 398 88l38 70Z" fill="var(--r-pine)"/>
+                <rect x="270" y="32" width="164" height="152" rx="6" fill="none" stroke="var(--r-wood)" stroke-width="10"/>
+                <path d="M352 34v148" stroke="var(--r-wood)" stroke-width="6"/>
+                <rect x="0" y="248" width="480" height="72" fill="var(--r-floor)"/>
+                <path d="M54 230h132v58H54z" fill="var(--r-stone)"/>
+                <path d="M70 230c6-40 20-52 34-62 2 24-10 32-6 48 14-12 20-24 18-40 26 22 34 44 32 54Z" fill="var(--r-flame)"/>
+                <rect x="214" y="216" width="122" height="70" rx="22" fill="var(--r-bed)"/>
+                <rect x="228" y="198" width="46" height="30" rx="12" fill="var(--r-linen)"/>
+                <rect x="282" y="198" width="46" height="30" rx="12" fill="var(--r-linen)"/>
+                <circle cx="96" cy="150" r="62" fill="var(--r-glow)" opacity=".38"/>
+              </svg>
+              <span class="room-card__tag room-card__tag--warm"><svg><use href="#i-fire"/></svg> Камин</span>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__top"><h3>Номер с камином «Жар»</h3><span class="room-card__area">28 м² · 2 гостя</span></div>
+              <p>Камин, два кресла и звук дождя по крыше. Создан для тихих романтических выходных.</p>
+              <div class="room-card__footer"><span class="price"><strong>8 200 ₽</strong> / ночь</span><button class="btn btn--small btn--accent" data-intent="room" data-value="Номер с камином «Жар»">Выбрать <svg class="btn__icon"><use href="#i-arrow"/></svg></button></div>
+            </div>
+          </article>
+
+          <article class="room-card reveal tilt-card" data-tilt data-parallax="0.12" data-room="Семейный апартамент «Бельчонок»">
+            <div class="room-card__art room-card__art--family">
+              <svg viewBox="0 0 480 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="480" height="320" fill="var(--r-wall)"/>
+                <rect x="286" y="34" width="150" height="150" rx="6" fill="var(--r-sky)"/>
+                <path d="M286 158 326 88l38 70ZM322 158 366 78l44 80ZM374 158 414 92l38 66Z" fill="var(--r-pine)"/>
+                <rect x="284" y="32" width="154" height="154" rx="6" fill="none" stroke="var(--r-wood)" stroke-width="10"/>
+                <path d="M360 34v150" stroke="var(--r-wood)" stroke-width="6"/>
+                <rect x="0" y="244" width="480" height="76" fill="var(--r-floor)"/>
+                <rect x="52" y="96" width="160" height="24" rx="10" fill="var(--r-wood)"/>
+                <rect x="52" y="176" width="160" height="26" rx="10" fill="var(--r-wood)"/>
+                <path d="M60 120v56M204 120v56" stroke="var(--r-wood)" stroke-width="8"/>
+                <circle cx="98" cy="84" r="9" fill="var(--r-flame)"/><circle cx="164" cy="166" r="9" fill="var(--r-glow)"/>
+                <rect x="250" y="214" width="170" height="62" rx="12" fill="var(--r-bed)"/>
+                <rect x="266" y="198" width="60" height="30" rx="12" fill="var(--r-linen)"/>
+                <rect x="340" y="198" width="60" height="30" rx="12" fill="var(--r-linen)"/>
+              </svg>
+              <span class="room-card__tag"><svg><use href="#i-user"/></svg> Для семьи</span>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__top"><h3>Апартамент «Бельчонок»</h3><span class="room-card__area">38 м² · до 4 гостей</span></div>
+              <p>Двухъярусная кровать, уголок для игр и отдельная спальня для взрослых.</p>
+              <div class="room-card__footer"><span class="price"><strong>9 400 ₽</strong> / ночь</span><button class="btn btn--small btn--accent" data-intent="room" data-value="Семейный апартамент «Бельчонок»">Выбрать <svg class="btn__icon"><use href="#i-arrow"/></svg></button></div>
+            </div>
+          </article>
+
+          <article class="room-card reveal tilt-card" data-tilt data-parallax="0.12" data-room="Люкс «Тишина»">
+            <div class="room-card__art room-card__art--lux">
+              <svg viewBox="0 0 480 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="480" height="320" fill="var(--r-wall-deep)"/>
+                <rect x="60" y="18" width="360" height="196" rx="6" fill="var(--r-sky)"/>
+                <path d="M60 190 110 96l48 94ZM102 190 156 62l56 128ZM166 190 222 88l56 102ZM234 190 288 70l56 120ZM300 190 352 100l54 90Z" fill="var(--r-pine)"/>
+                <rect x="58" y="16" width="364" height="200" rx="6" fill="none" stroke="var(--r-wood)" stroke-width="12"/>
+                <path d="M240 18v196" stroke="var(--r-wood)" stroke-width="7"/>
+                <rect x="0" y="252" width="480" height="68" fill="var(--r-floor)"/>
+                <ellipse cx="240" cy="250" rx="104" ry="36" fill="var(--r-linen)"/>
+                <ellipse cx="240" cy="246" rx="88" ry="26" fill="var(--r-water)"/>
+                <circle cx="398" cy="70" r="42" fill="var(--r-glow)" opacity=".5"/>
+              </svg>
+              <span class="room-card__tag room-card__tag--gold"><svg><use href="#i-spark"/></svg> Премиум</span>
+            </div>
+            <div class="room-card__body">
+              <div class="room-card__top"><h3>Люкс «Тишина»</h3><span class="room-card__area">46 м² · 2 гостя</span></div>
+              <p>Ванна у окна, отдельная гостиная и лучший рассвет в отеле. Для тех, кто любит простор.</p>
+              <div class="room-card__footer"><span class="price"><strong>13 900 ₽</strong> / ночь</span><button class="btn btn--small btn--accent" data-intent="room" data-value="Люкс «Тишина»">Выбрать <svg class="btn__icon"><use href="#i-arrow"/></svg></button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Экран 4. Активности ============ -->
+    <section class="section section--activities" id="activities">
+      <div class="shell">
+        <header class="section-head section-head--row reveal" data-parallax="0.08">
+          <div>
+            <span class="kicker">Активности</span>
+            <h2 class="section-title">День, который<br><em>не хочется делить.</em></h2>
+          </div>
+          <p class="section-lead section-lead--compact">Нажми на парящий объект — расскажем, что ждёт за окном.</p>
+        </header>
+
+        <div class="activity-grid" id="activity-grid">
+          <button class="activity-card reveal tilt-card" type="button" data-tilt data-parallax="0.16" data-activity="banya">
+            <span class="activity-card__float"><svg><use href="#i-fire"/></svg></span>
+            <span class="activity-card__name">Баня</span>
+            <span class="activity-card__desc">Пар, берёзовый веник и тишина</span>
+            <span class="activity-card__more">Подробнее <svg><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="activity-card reveal tilt-card" type="button" data-tilt data-parallax="0.16" data-activity="tub">
+            <span class="activity-card__float"><svg><use href="#i-spark"/></svg></span>
+            <span class="activity-card__name">Чан на открытом воздухе</span>
+            <span class="activity-card__desc">Горячая вода и звёзды над лесом</span>
+            <span class="activity-card__more">Подробнее <svg><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="activity-card reveal tilt-card" type="button" data-tilt data-parallax="0.16" data-activity="trail">
+            <span class="activity-card__float"><svg><use href="#i-pine"/></svg></span>
+            <span class="activity-card__name">Экотропы</span>
+            <span class="activity-card__desc">Мхи, грибы и следы белки</span>
+            <span class="activity-card__more">Подробнее <svg><use href="#i-arrow"/></svg></span>
+          </button>
+          <button class="activity-card reveal tilt-card" type="button" data-tilt data-parallax="0.16" data-activity="bbq">
+            <span class="activity-card__float"><svg><use href="#i-fire"/></svg></span>
+            <span class="activity-card__name">Мангальная зона</span>
+            <span class="activity-card__desc">Ужин при свете гирлянд</span>
+            <span class="activity-card__more">Подробнее <svg><use href="#i-arrow"/></svg></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Экран 5. Новогоднее спецпредложение ============ -->
+    <section class="section section--newyear" id="newyear">
+      <div class="garland" aria-hidden="true"></div>
+      <div class="shell newyear-grid">
+        <div class="newyear-copy reveal" data-parallax="0.07">
+          <span class="kicker kicker--gold"><svg><use href="#i-snow"/></svg> Только зимой</span>
+          <h2 class="section-title">Встреть Новый год<br><em>в лесной сказке</em></h2>
+          <p class="section-lead">Ёлка в окне, дым из трубы, мандарины и тишина. Мы собрали всё, что нужно для самого тёплого праздника — осталось только приехать.</p>
+          <ul class="package-list">
+            <li><svg><use href="#i-check"/></svg> 3 ночи в украшенном номере</li>
+            <li><svg><use href="#i-check"/></svg> Праздничная программа 31.12</li>
+            <li><svg><use href="#i-check"/></svg> Баня и завтраки включены</li>
+            <li><svg><use href="#i-check"/></svg> Гирлянды, ёлка и сюрприз для детей</li>
+          </ul>
+          <div class="newyear-price">
+            <span class="newyear-price__old">29 700 ₽</span>
+            <span class="newyear-price__new">24 900 ₽</span>
+            <span class="newyear-price__note">за 3 ночи · <b>−16%</b></span>
+          </div>
+          <a href="#booking" class="btn btn--gold btn--lg" data-intent="newyear">Забронировать со скидкой 16% <svg class="btn__icon"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <div class="newyear-scene reveal" data-parallax="0.14" aria-hidden="true">
+          <div class="newyear-scene__sky"></div>
+          <div class="newyear-scene__moon" data-parallax="0.22"></div>
+          <svg class="newyear-scene__forest" viewBox="0 0 600 320" preserveAspectRatio="none">
+            <path d="M0 240 55 110l55 130ZM40 240 110 70l70 170ZM110 240 175 120l65 120ZM420 240 485 100l65 140ZM470 240 535 80l65 160Z" fill="var(--ny-forest)"/>
+          </svg>
+          <div class="newyear-scene__snow"></div>
+          <div class="newyear-house">
+            <div class="newyear-house__smoke"><i></i><i></i><i></i></div>
+            <div class="newyear-house__roof"></div>
+            <div class="newyear-house__wall">
+              <span class="newyear-house__window"></span>
+              <span class="newyear-house__door"></span>
+            </div>
+          </div>
+          <div class="newyear-tree">
+            <span></span><span></span><span></span><span class="newyear-tree__star">✦</span>
+          </div>
+          <div class="newyear-scene__ground"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Экран 6. Как добраться ============ -->
+    <section class="section section--route" id="route">
+      <div class="shell">
+        <header class="section-head reveal" data-parallax="0.08">
+          <span class="kicker">Как добраться</span>
+          <h2 class="section-title">Дорога сюда —<br><em>уже часть отдыха.</em></h2>
+          <p class="section-lead">Дорога расчищается ежедневно, парковка — у входа. Заезжайте в любое время после 14:00.</p>
+        </header>
+
+        <div class="route-grid">
+          <div class="route-map reveal" id="route-map" data-parallax="0.1">
+            <div class="route-map__canvas" id="map-canvas">
+              <svg viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="800" height="520" fill="var(--map-bg)"/>
+                <g fill="var(--map-forest)" opacity=".7">
+                  <circle cx="90" cy="90" r="46"/><circle cx="160" cy="60" r="34"/><circle cx="240" cy="110" r="52"/><circle cx="640" cy="90" r="60"/><circle cx="730" cy="180" r="46"/><circle cx="90" cy="400" r="58"/><circle cx="210" cy="450" r="44"/><circle cx="620" cy="420" r="66"/><circle cx="740" cy="460" r="40"/><circle cx="430" cy="60" r="38"/><circle cx="380" cy="470" r="38"/>
+                </g>
+                <path d="M-20 330C130 300 190 360 300 320S520 200 820 250" fill="none" stroke="var(--map-water)" stroke-width="34" opacity=".6" stroke-linecap="round"/>
+                <path d="M50 500C90 380 210 350 300 300s130-80 200-120 170-80 320-90" fill="none" stroke="var(--map-road-bg)" stroke-width="18" stroke-linecap="round"/>
+                <path d="M50 500C90 380 210 350 300 300s130-80 200-120 170-80 320-90" fill="none" stroke="var(--map-road)" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 0"/>
+                <path id="map-route-line" d="M50 500C90 380 210 350 300 300s130-80 200-120 170-80 320-90" fill="none" stroke="var(--map-route)" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 12"/>
+                <g transform="translate(50 500)"><circle r="14" fill="var(--map-city)"/><circle r="5" fill="#fff"/></g>
+                <g transform="translate(670 212)"><circle r="30" fill="var(--map-pin-soft)"/><circle r="9" fill="var(--map-pin)"/><circle r="4" fill="#fff"/></g>
+              </svg>
+              <div class="route-map__label route-map__label--city">Город</div>
+              <div class="route-map__label route-map__label--hotel">Отель в лесу</div>
+              <div class="route-map__controls">
+                <button type="button" id="map-zoom-in" aria-label="Приблизить карту">+</button>
+                <button type="button" id="map-zoom-out" aria-label="Отдалить карту">−</button>
+              </div>
+              <div class="route-map__hint">Схема маршрута · нажмите, чтобы открыть навигатор</div>
+            </div>
+            <a class="route-map__link" id="map-link" href="#" target="_blank" rel="noopener">Открыть маршрут в Яндекс.Картах <svg><use href="#i-arrow"/></svg></a>
+          </div>
+
+          <div class="route-info reveal" data-parallax="0.12">
+            <div class="route-info__item"><span class="route-info__icon"><svg><use href="#i-clock"/></svg></span><div><strong>40 минут</strong><p>от города на машине</p></div></div>
+            <div class="route-info__item"><span class="route-info__icon"><svg><use href="#i-pin"/></svg></span><div><strong>12 км по лесу</strong><p>асфальт и ухоженная лесная дорога</p></div></div>
+            <div class="route-info__item"><span class="route-info__icon"><svg><use href="#i-pine"/></svg></span><div><strong>Парковка у входа</strong><p>бесплатно, под открытым небом</p></div></div>
+            <div class="route-info__note"><svg><use href="#i-snow"/></svg><span>Зимой дорогу расчищаем каждый день с 6:00. Подсвеченная дорожка до подъезда — как продолжение праздника.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Экран 7. Бронирование + контакты ============ -->
+    <section class="section section--booking" id="booking">
+      <div class="shell booking-grid">
+        <div class="booking-copy reveal" id="contacts" data-parallax="0.07">
+          <span class="kicker">Прямое бронирование</span>
+          <h2 class="section-title">Приезжайте.<br><em>Мы уже ждём.</em></h2>
+          <p class="section-lead">Короткая форма — без анкет и звонков «на всякий случай». Ответим в течение 15 минут и сразу подтвердим даты.</p>
+
+          <div class="contact-list">
+            <a class="contact-item" id="contact-phone" href="tel:+79991234567"><span class="contact-item__icon"><svg><use href="#i-phone"/></svg></span><span><small>Телефон</small><strong>+7 (999) 123-45-67</strong></span></a>
+            <a class="contact-item" id="contact-mail" href="mailto:hello@lesisvet.ru"><span class="contact-item__icon"><svg><use href="#i-mail"/></svg></span><span><small>Почта</small><strong>hello@lesisvet.ru</strong></span></a>
+            <a class="contact-item" id="contact-tg" href="https://t.me/lesisvet_hotel" target="_blank" rel="noopener"><span class="contact-item__icon"><svg><use href="#i-tg"/></svg></span><span><small>Telegram</small><strong>@lesisvet_hotel</strong></span></a>
+            <a class="contact-item" id="contact-wa" href="https://wa.me/79991234567" target="_blank" rel="noopener"><span class="contact-item__icon"><svg><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><strong>+7 (999) 123-45-67</strong></span></a>
+          </div>
+          <p class="booking-copy__hours"><svg><use href="#i-clock"/></svg> На связи ежедневно, 08:00–22:00</p>
+        </div>
+
+        <form class="booking-form reveal" id="booking-form" novalidate data-parallax="0.09">
+          <div class="booking-form__head">
+            <h3>Оставьте заявку</h3>
+            <span>Без оплаты и проверки дат на этом этапе</span>
+          </div>
+          <input type="hidden" name="purpose" id="booking-purpose" value="Бронирование дат">
+
+          <div class="booking-form__fields" id="booking-form-fields">
+            <div class="field">
+              <label for="guest-name">Ваше имя</label>
+              <input id="guest-name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required>
+              <span class="field__error" data-error-for="guest-name"></span>
+            </div>
+
+            <div class="field">
+              <label for="guest-phone">Телефон</label>
+              <input id="guest-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
+              <span class="field__error" data-error-for="guest-phone"></span>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="date-in">Заезд</label>
+                <input id="date-in" name="dateIn" type="date" required>
+                <span class="field__error" data-error-for="date-in"></span>
+              </div>
+              <div class="field">
+                <label for="date-out">Выезд</label>
+                <input id="date-out" name="dateOut" type="date" required>
+                <span class="field__error" data-error-for="date-out"></span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="guest-count">Гостей</label>
+                <select id="guest-count" name="guests">
+                  <option value="1">1 гость</option>
+                  <option value="2" selected>2 гостя</option>
+                  <option value="3">3 гостя</option>
+                  <option value="4">4 гостя</option>
+                  <option value="5+">5+ гостей</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="room-choice">Номер</label>
+                <select id="room-choice" name="room">
+                  <option value="Пока не определился">Пока не определился</option>
+                  <option value="Лесной номер «Сосна»">«Сосна» — 6 500 ₽</option>
+                  <option value="Номер с камином «Жар»">«Жар» — 8 200 ₽</option>
+                  <option value="Семейный апартамент «Бельчонок»">«Бельчонок» — 9 400 ₽</option>
+                  <option value="Люкс «Тишина»">«Тишина» — 13 900 ₽</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="guest-message">Пожелания <span>необязательно</span></label>
+              <textarea id="guest-message" name="message" rows="2" placeholder="Например, тихий этаж или детская кроватка"></textarea>
+            </div>
+
+            <button class="btn btn--accent btn--block btn--lg" type="submit">Получить консультацию за 15 минут <svg class="btn__icon"><use href="#i-arrow"/></svg></button>
+            <p class="booking-form__legal">Нажимая кнопку, вы соглашаетесь с <a href="#policy" data-modal="policy">политикой конфиденциальности</a>. Мы не передаём данные третьим лицам.</p>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          </div>
+
+          <div class="form-success" id="form-success" hidden>
+            <span class="form-success__icon"><svg><use href="#i-check"/></svg></span>
+            <h4>Заявка принята</h4>
+            <p>Мы получили ваши данные и свяжемся с вами в течение 15 минут.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Подвал ============ -->
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <a class="brand brand--footer" href="#top"><span class="brand__mark"><svg><use href="#i-pine"/></svg></span><span class="brand__text"><strong>ЛЕС</strong><span>и СВЕТ</span></span></a>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="#why">Почему мы</a><a href="#rooms">Номера</a><a href="#activities">Активности</a><a href="#route">Как добраться</a><a href="#contacts">Контакты</a>
+      </nav>
+      <div class="footer__legal"><a href="#policy" data-modal="policy">Политика конфиденциальности</a><a href="#requisites" data-modal="requisites">Реквизиты</a></div>
+      <p class="footer__copy">© 2026 Отель в лесу. Дыши лесом. Живи моментом.</p>
+    </div>
+  </footer>
+
+  <!-- ============ Модальные окна ============ -->
+  <div class="modal" id="activity-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="activity-modal-title">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть"><svg><use href="#i-close"/></svg></button>
+      <div class="modal__art" id="activity-modal-art"></div>
+      <div class="modal__content">
+        <span class="kicker" id="activity-modal-kicker">Активность</span>
+        <h3 id="activity-modal-title"></h3>
+        <p id="activity-modal-text"></p>
+        <ul class="modal__list" id="activity-modal-list"></ul>
+        <a href="#booking" class="btn btn--accent" data-intent="activity" data-close-modal>Добавить к брони <svg class="btn__icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="info-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel modal__panel--info" role="dialog" aria-modal="true" aria-labelledby="info-modal-title">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть"><svg><use href="#i-close"/></svg></button>
+      <span class="kicker">Информация</span>
+      <h3 id="info-modal-title"></h3>
+      <div class="info-modal__body" id="info-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Детали парящего объекта -->
+  <div class="modal" id="object-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel modal__panel--object" role="dialog" aria-modal="true" aria-labelledby="object-modal-title">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть"><svg><use href="#i-close"/></svg></button>
+      <div class="modal__art" id="object-modal-art"></div>
+      <div class="modal__content">
+        <span class="kicker" id="object-modal-kicker">Зима в лесу</span>
+        <h3 id="object-modal-title"></h3>
+        <p id="object-modal-text"></p>
+        <ul class="modal__list" id="object-modal-list"></ul>
+        <a href="#activities" class="btn btn--accent" id="object-modal-cta" data-close-modal>Смотреть активности <svg class="btn__icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ Уведомление ============ -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!--
+    Аналитика: после получения счётчика раскомментируйте и замените ID.
+    Цели в Яндекс.Метрике: HERO_BOOK, ROOM_SELECT, CORPORATE, NEWYEAR, ACTIVITY, FORM_SUBMIT, THEME_TOGGLE.
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){...})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym","...");
+    </script>
+  -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

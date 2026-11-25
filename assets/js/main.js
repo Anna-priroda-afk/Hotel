@@ -22,7 +22,7 @@
     booking: {
       // Google Sheets: URL веб-приложения Apps Script (Deployment -> Web app URL).
       // Скрипт для вставки — в файле scripts/google-apps-script.gs.
-      googleSheetsUrl: 'https://script.google.com/macros/s/AKfycbwFlHKqXfrsrdIew4XK9zqyNSPu2puNt6UQMydzuAsqMpjrqZHhQOWuYCK4NvX4xlJhrw/exec',
+      googleSheetsUrl: 'https://script.google.com/macros/s/AKfycbzyDPklcucdm3mcGgcnDSziJAKoUY49KSlVHa4f1i2lLnu8Iq7wBmMCz3Msk0AEz4K-jQ/exec',
       // Variants:
       // 1) FormSubmit: 'https://formsubmit.co/ajax/hello@lesisvet.ru'
       // 2) GetForm:   'https://getform.io/f/your-endpoint'

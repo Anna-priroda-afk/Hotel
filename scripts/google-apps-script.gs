@@ -17,6 +17,38 @@
  */
 
 const SHEET_NAME = 'Заявки';
+const PHONE_COLUMN = 5;
+
+/**
+ * Лидирующий апостроф заставляет Таблицу хранить номер как текст.
+ * В ячейке он не отображается, но защищает телефон от разбора как формулы.
+ */
+function toTextPhone(value) {
+  const phone = String(value || '');
+  return phone.charAt(0) === "'" ? phone : "'" + phone;
+}
+
+/**
+ * Телефон начинается с «+», поэтому Таблица может принять его за формулу
+ * и показать #ERROR. Заранее задаём столбцу текстовый формат.
+ */
+function preparePhoneColumn(sheet) {
+  sheet.getRange(2, PHONE_COLUMN, Math.max(1, sheet.getMaxRows() - 1), 1)
+    .setNumberFormat('@');
+
+  // Восстанавливаем уже испорченные ячейки: их формулу можно прочитать
+  // и записать обратно как текст без ведущего «=».
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return;
+
+  for (let row = 2; row <= lastRow; row++) {
+    const cell = sheet.getRange(row, PHONE_COLUMN);
+    const formula = cell.getFormula();
+    if (typeof formula === 'string' && /^=?\+?[\d(]/.test(formula)) {
+      cell.setValue(toTextPhone(formula.replace(/^=/, '')));
+    }
+  }
+}
 
 function writeLead(params) {
   const p = params || {};
@@ -42,12 +74,14 @@ function writeLead(params) {
     sheet.setFrozenRows(1);
   }
 
+  preparePhoneColumn(sheet);
+
   sheet.appendRow([
     p.submittedAt || new Date().toISOString(),
     'Лендинг «Отель в лесу»',
     p.purpose || '',
     p.name || '',
-    p.phone || '',
+    toTextPhone(p.phone),
     p.dateIn || '',
     p.dateOut || '',
     p.guests || '',
@@ -56,6 +90,16 @@ function writeLead(params) {
     p.page || '',
     p.theme || ''
   ]);
+}
+
+/**
+ * Можно запустить вручную из редактора Apps Script, чтобы починить
+ * уже существующие ячейки с #ERROR без отправки новой заявки.
+ */
+function fixExistingPhones() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
+  if (!sheet) return;
+  preparePhoneColumn(sheet);
 }
 
 function doGet(e) {
